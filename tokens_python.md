@@ -1,97 +1,98 @@
---------------------------------------------------------------------------------
-# Guia de Referência: Sintaxe, Operadores e Palavras-chave do Python
+#  Guia de Referência: Operadores e Palavras-Chave em Python
 
-Este documento contém um registo dos principais operadores, símbolos e palavras-chave da linguagem Python.
-
-## 1. Símbolos (Operadores e Identificadores)
-
-### 1.1 Operadores Aritméticos
-Usados para realizar operações matemáticas comuns :
-*   `+` : Adição ou sinal positivo .
-*   `-` : Subtração ou sinal negativo.
-*   `*` : Multiplicação .
-*   `/` : Divisão .
-*   `%` : Módulo (resto da divisão) .
-*   `//` : Divisão inteira (arredonda o resultado para baixo) .
-*   `**` : Exponenciação .
-
-### 1.2 Operadores Relacionais (Comparação)
-Usados para comparar dois valores, retornando um booleano (`True` ou `False`) :
-*   `==` : Igual a .
-*   `!=` : Diferente de .
-*   `>` : Maior que.
-*   `<` : Menor que .
-*   `>=` : Maior ou igual a .
-*   `<=` : Menor ou igual a .
-
-### 1.3 Operadores Booleanos (Bitwise)
-Operam ao nível dos bits (bit a bit) :
-*   `&` : AND binário .
-*   `|` : OR binário .
-*   `^` : XOR binário .
-*   `~` : NOT binário (inversão) .
-*   `<<` : Shift à esquerda (preenchimento com zeros) .
-*   `>>` : Shift à direita .
-
-### 1.4 Símbolos de Atribuição
-Usados para atribuir ou atualizar valores em variáveis :
-*   `=` : Atribuição simples .
-*   `+=`, `-=`, `*=`, `/=`, `%=`, `//=`, `**=` : Atribuições compostas com aritmética .
-*   `&=`, `|=`, `^=`, `>>=`, `<<=` : Atribuições compostas com operações bitwise .
-
-### 1.5 Símbolos Identificadores de Tipos de Dados
-Símbolos literais usados para definir e aceder a coleções :
-*   `[]` : Define uma **Lista** (*List*) e acede a elementos por índice .
-*   `()` : Define uma **Tupla** (*Tuple*) .
-*   `{}` : Define um **Conjunto** (*Set*) ou um **Dicionário** (*Dictionary*) .
-
-### 1.6 Símbolo Identificador de Início de Bloco
-*   `:` : Os **dois pontos** são usados para marcar o início de um bloco de código indentado (ex: após `if`, `for`, `def`) .
+Este documento regista os principais símbolos e palavras reservadas da linguagem Python, organizados por categorias funcionais.
 
 ---
 
-## 2. Palavras-chave (Keywords)
+##  Símbolos Identificadores e Operadores
 
-### 2.1 Identificadoras de Blocos e Controlo de Fluxo
-Palavras reservadas que estruturam o código :
+### 1. Operadores Aritméticos
+
+| Símbolo | Operação |
+| :--- | :--- |
+| `+` | Adição |
+| `-` | Subtração |
+| `*` | Multiplicação |
+| `/` | Divisão (decimal) |
+| `//` | Divisão Inteira (descarta decimais) |
+| `%` | Módulo (resto da divisão) |
+| `**` | Exponenciação (potência) |
+
+### 2. Operadores Relacionais (Comparação)
+
+| Símbolo | Significado |
+| :--- | :--- |
+| `==` | Igual a |
+| `!=` | Diferente de |
+| `>` | Maior que |
+| `<` | Menor que |
+| `> =` | Maior ou igual a |
+| `<= ` | Menor ou igual a |
+
+### 3. Operadores Booleanos (Bitwise)
+*Embora a lógica estrutural use palavras, o Python usa estes símbolos para operações bit a bit:*
+*   `&` : AND (E)
+*   `|` : OR (OU)
+*   `^` : XOR (OU Exclusivo)
+*   `~` : NOT (Inversão/Complemento)
+
+### 4. Símbolos de Atribuição
+*   `=` : Atribuição simples.
+*   `+=`, `-=`, `*=`, `/=` : Atribuição composta (opera e guarda).
+*   `:=` : Operador Walrus (atribui valor dentro de uma expressão).
+
+### 5. Símbolos Identificadores de Tipos (Literais)
+*O Python identifica tipos pela forma como os dados são escritos:*
+*   `' '` ou `" "` : **String** (Texto).
+*   `[ ]` : **Lista** (Ordenada e mutável).
+*   `( )` : **Tuplo** (Ordenado e imutável).
+*   `{ }` : **Dicionário** (Chave-valor) ou **Conjunto** (Set).
+
+### 6. Símbolo Identificador de Início de Bloco
+*   `:` (**Dois-pontos**) : Indica obrigatoriamente que o código seguinte deve estar indentado.
+
+---
+
+## 🔤 Palavras-Chave (Keywords)
+
+### 1. Identificadoras de Blocos
 *   `if`, `elif`, `else` : Estruturas condicionais.
-*   `for`, `while` : Laços de repetição (loops) .
-*   `def` : Define uma função .
-*   `class` : Define uma classe .
-*   `try`, `except`, `finally` : Tratamento de exceções.
-*   `break`, `continue`, `pass` : Controlo interno de loops e blocos vazios .
-*   `return`, `yield` : Retorno de valores ou criação de geradores .
+*   `for`, `while` : Estruturas de repetição (loops).
+*   `def` : Definição de funções.
+*   `class` : Definição de classes.
+*   `try`, `except`, `finally` : Tratamento de exceções/erros.
+*   `with` : Gestão de contexto.
 
-### 2.2 Tipos de Dados (Classes e Keywords)
-Nomes usados para representar ou converter dados :
-*   `int`, `float`, `complex` : Tipos numéricos .
-*   `str` : Cadeia de caracteres (string).
-*   `bool` : Valores booleanos .
-*   `list`, `tuple`, `dict`, `set` : Estruturas de coleções .
-*   `None` : Representa a ausência de valor .
+### 2. Tipos de Dados (Construtores)
+*   `int`, `float`, `complex` : Numéricos.
+*   `str` : Textual.
+*   `bool` : Lógico.
+*   `list`, `tuple`, `dict`, `set` : Coleções.
 
-### 2.3 Funções Built-in (Exemplos)
-Funções nativas sempre disponíveis :
-*   `print()` : Saída de dados na consola .
-*   `type()` : Verifica o tipo de um objeto .
-*   `len()` : Retorna o tamanho de uma sequência .
-*   `range()` : Gera sequências de números .
-*   `input()` : Recebe entrada do utilizador .
-*   `open()` : Abre ficheiros .
+### 3. Funções Built-in (Nativas comuns)
+*   `print()` : Saída de dados.
+*   `input()` : Entrada de dados.
+*   `type()` : Verificação de tipo.
+*   `len()` : Contagem de elementos.
+*   `range()` : Geração de sequências numéricas.
 
-### 2.4 Operadores Booleanos (Lógicos)
-Keywords usadas para combinar condições lógicas:
-*   `and` : Verdadeiro se ambas as condições forem verdadeiras .
-*   `or` : Verdadeiro se pelo menos uma condição for verdadeira .
-*   `not` : Inverte o valor lógico .
-*   `is`, `is not` : Operadores de identidade (verificam se é o mesmo objeto na memória) .
+### 4. Operadores Booleanos (Lógicos)
+*   `and` : Retorna `True` se ambos forem verdadeiros.
+*   `or` : Retorna `True` se um for verdadeiro.
+*   `not` : Inverte o estado lógico.
+*   `True` / `False` : Valores lógicos fundamentais.
 
-### 2.5 Demais Palavras-chave
-Outras funcionalidades essenciais da linguagem :
-*   `import`, `from`, `as` : Importação de módulos e criação de pseudónimos .
-*   `in`, `not in` : Operadores de associação (presença em sequências) .
-*   `lambda` : Criação de funções anónimas .
-*   `global`, `nonlocal` : Definição de escopo de variáveis .
-*   `with` : Gestão de contexto (ex: manipulação de ficheiros) .
-*   `del` : Elimina referências a objetos ou atributos .
-*   `True`, `False` : Constantes booleanas .
+### 5. Demais Palavras-Chave
+
+| Palavra | Função |
+| :--- | :--- |
+| `import` / `from` | Importação de bibliotecas. |
+| `as` | Define um pseudónimo (alias). |
+| `in` | Verifica pertença em sequências. |
+| `is` | Verifica se dois objetos são a mesma identidade. |
+| `return` | Sai de uma função enviando um valor. |
+| `break` / `continue` | Controlo de interrupção de loops. |
+| `None` | Representa o valor nulo/vazio. |
+| `lambda` | Cria funções anónimas rápidas. |
+| `pass` | Espaço reservado (não faz nada). |
+| `del` | Remove referências a variáveis ou itens. |
